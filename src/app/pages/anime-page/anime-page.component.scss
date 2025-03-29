@@ -1,0 +1,23 @@
+.anime-page-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.anime-page-card {
+  img {
+    height: 12rem;
+    object-fit: cover;
+  }
+
+  h5 {
+    font-size: 0.8rem;
+    color: #656565;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: #656565;
+  }
+}

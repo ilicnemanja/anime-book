@@ -1,0 +1,21 @@
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #121212;
+
+  &__h1 {
+    cursor: pointer;
+  }
+
+  &__ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+
+    > li {
+      cursor: pointer;
+    }
+  }
+}

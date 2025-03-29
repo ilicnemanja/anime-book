@@ -1,0 +1,17 @@
+<section class="anime-page-section">
+  <h4>Top Anime Movies & Series</h4>
+
+  <div class="anime-page-container">
+    @for (anime of topAnime; track anime.mal_id) {
+    <div class="anime-page-card">
+      <img
+        [src]="anime.images.jpg.image_url"
+        alt="{{ anime.title }}"
+        width="150"
+      />
+      <h5>{{ anime.title }}</h5>
+      <p>Rank: {{ anime.rank }}</p>
+    </div>
+    }
+  </div>
+</section>
