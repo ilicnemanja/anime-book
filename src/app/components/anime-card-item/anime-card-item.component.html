@@ -1,1 +1,20 @@
-<p>anime-card-item works!</p>
+<div [routerLink]="anime.mal_id" class="anime-card">
+  <p class="anime-card__rank">Top #{{ anime.rank }}</p>
+  <img [src]="anime.images.jpg.image_url" alt="{{ anime.title }}" width="150" />
+  <h5>{{ anime.title }}</h5>
+  <p class="anime-card__type">
+    {{ anime.type }}
+  </p>
+
+  @if (anime.episodes > 1) {
+  <p class="anime-card__episodes">{{ anime.episodes }} episodes</p>
+  }
+
+  <p class="anime-card__score">
+    @if(anime.score === 10) {
+    {{ anime.score | number : "2.0-0" }}
+    } @else {
+    {{ anime.score | number : "1.1-1" }}
+    }
+  </p>
+</div>

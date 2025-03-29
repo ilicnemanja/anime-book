@@ -1,0 +1,7 @@
+.anime-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1.2rem;
+  justify-content: center;
+  padding: 1rem;
+}

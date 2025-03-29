@@ -1,1 +1,5 @@
-<p>anime-cards-list works!</p>
+<div class="anime-card-list">
+  @for (anime of animeList; track anime.mal_id) {
+  <app-anime-card-item [anime]="anime" />
+  }
+</div>

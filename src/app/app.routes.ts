@@ -6,6 +6,7 @@ import { SignUpPageComponent } from './pages/sign-up-page/sign-up-page.component
 import { AnimePageComponent } from './pages/anime-page/anime-page.component';
 import { MangaPageComponent } from './pages/manga-page/manga-page.component';
 import { GenresPageComponent } from './pages/genres-page/genres-page.component';
+import { AnimeDetailsPageComponent } from './pages/anime-details-page/anime-details-page.component';
 
 export const routes: Routes = [
   {
@@ -53,5 +54,11 @@ export const routes: Routes = [
     pathMatch: 'full',
     component: GenresPageComponent,
     title: 'Anime Book | Genres',
+  },
+  {
+    path: 'anime/:id',
+    pathMatch: 'full',
+    component: AnimeDetailsPageComponent,
+    title: 'Anime Book | Anime Details',
   },
 ];
