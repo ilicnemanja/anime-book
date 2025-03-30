@@ -26,4 +26,16 @@ export class AnimeService {
         })
       );
   }
+
+  getAnimeDetails(id: string): Observable<any> {
+    return this.http
+      .get<{ data: object }>(`${environment.apiUrl}/anime/${id}`)
+      .pipe(
+        map((response) => response.data),
+        catchError((error) => {
+          console.error('Error getting anime details', error);
+          return throwError(() => new Error('Failed to fetch anime details'));
+        })
+      );
+  }
 }

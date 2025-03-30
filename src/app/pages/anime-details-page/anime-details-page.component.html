@@ -1,1 +1,28 @@
-<p>anime-details-page works!</p>
+<section class="anime-details-page-section">
+  <div class="anime-details-page-section__header">
+    <div>
+      <img
+        [src]="animeDetails.images.jpg.large_image_url"
+        alt="{{ animeDetails.title }}"
+      />
+    </div>
+    <div class="anime-details-page-section__content">
+      <h2 class="anime-details-page-section__title">
+        {{ animeDetails.title }}
+      </h2>
+      <p class="anime-details-page-section__synopsis">
+        {{ animeDetails.synopsis }}
+      </p>
+    </div>
+  </div>
+  @if (safeTrailerUrl) {
+  <div class="anime-details-page-section__trailer">
+    <iframe
+      *ngIf="safeTrailerUrl"
+      [src]="safeTrailerUrl"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
+  }
+</section>
